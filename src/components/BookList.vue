@@ -1,4 +1,3 @@
-<!-- src/components/BookList.vue -->
 <template>
     <div>
       <table class="table table-striped">
@@ -22,6 +21,7 @@
             <td>
               <button @click="$emit('edit-book', book)" class="btn btn-warning btn-sm mx-1">Modifier</button>
               <button @click="$emit('remove-book', book)" class="btn btn-danger btn-sm mx-1">Supprimer</button>
+              <button @click="$emit('details-book', book)" class="btn btn-info btn-sm mx-1">Details</button>
             </td>
           </tr>
         </tbody>
@@ -31,11 +31,9 @@
   
   <script setup>
   import { defineProps, defineEmits } from 'vue'
-  
   const props = defineProps({
     books: Array,
   })
-  
-  const emits = defineEmits(['edit-book', 'remove-book'])
-  </script>
+  const emits = defineEmits(['edit-book', 'remove-book','detail-book'])
+</script>
   

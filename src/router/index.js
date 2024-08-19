@@ -1,7 +1,6 @@
-// src/router/index.js
 import { createRouter, createWebHistory } from 'vue-router'
 import BooksView from '../views/BooksView.vue'
-// Importez les autres vues comme MembersView et LoansView si nécessaires
+
 
 const routes = [
   { path: '/', redirect: '/livres' },

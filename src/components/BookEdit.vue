@@ -1,26 +1,25 @@
-<!-- src/components/BookEdit.vue -->
 <template>
     <div class="mb-4">
       <h3>Modifier le Livre</h3>
       <form @submit.prevent="submitEditForm">
         <div class="mb-3">
-          <input v-model="editedBook.title" type="text" class="form-control" placeholder="Titre du livre" required />
+              <input v-model="editedBook.title" type="text" class="form-control" placeholder="Titre du livre" required />
         </div>
   
         <div class="mb-3">
-          <input v-model="editedBook.author" type="text" class="form-control" placeholder="Auteur du livre" required />
+              <input v-model="editedBook.author" type="text" class="form-control" placeholder="Auteur du livre" required />
         </div>
   
         <div class="mb-3">
-          <input v-model="editedBook.genre" type="text" class="form-control" placeholder="Genre du livre" required />
+              <input v-model="editedBook.genre" type="text" class="form-control" placeholder="Genre du livre" required />
         </div>
   
         <div class="mb-3">
-          <input v-model="editedBook.prix" type="text" class="form-control" placeholder="Prix du livre" required />
+            <input v-model="editedBook.prix" type="text" class="form-control" placeholder="Prix du livre" required />
         </div>
   
         <div class="mb-3">
-          <input v-model="editedBook.annee_pub" type="text" class="form-control" placeholder="Année de publication du livre" required />
+            <input v-model="editedBook.annee_pub" type="text" class="form-control" placeholder="Année de publication du livre" required />
         </div>
   
         <button type="submit" class="btn btn-primary">Enregistrer les modifications</button>
@@ -59,5 +58,6 @@
   const cancelEdit = () => {
     emits('cancel-edit')
   }
+  
   </script>
   
