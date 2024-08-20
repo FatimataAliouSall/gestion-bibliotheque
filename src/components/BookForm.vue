@@ -1,4 +1,3 @@
-<!-- src/components/BookForm.vue -->
 <template>
     <div class="mb-4">
       <form @submit.prevent="submitForm">
