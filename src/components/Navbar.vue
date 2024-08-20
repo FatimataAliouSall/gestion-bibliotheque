@@ -1,7 +1,7 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" routerLink="/">Gestion Bibliotheque</a>
+        <router-link class="navbar-brand" to="/">Gestion Bibliotheque</router-link>
         <button
           class="navbar-toggler"
           type="button"
@@ -14,76 +14,75 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 custom-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" routerLink="/">Acceuil</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Gestion des livres
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" routerLink="/livres">Affichier listes livre</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" routerLink="/livres/ajout">Ajout un livre</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" routerLink="/livres/modifier">Modifier un livre</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" routerLink="/livres/supprimer">Supprimer un livre</a></li>
-              </ul>
-            </li>
-  
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Gestion des membres
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" routerLink="/membres">Affichier listes membres</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" routerLink="/membres/ajout">Ajout un membre</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" routerLink="/membres/modifier">Modifier un membre</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" routerLink="/membres/supprimer">Supprimer un membre</a></li>
-              </ul>
-            </li>
-  
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Gestion des prêts
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" routerLink="/prets">Affichier listes prêts</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" routerLink="/prets/ajout">Ajout un prêt</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" routerLink="/prets/modifier">Modifier un prêt</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" routerLink="/prets/supprimer">Supprimer un prêt</a></li>
-              </ul>
-            </li>
-          </ul>
+          <li class="nav-item">
+            <router-link class="nav-link active" aria-current="page" to="/">Accueil</router-link>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Gestion des livres
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><router-link class="dropdown-item" to="/livres">Afficher liste des livres</router-link></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><router-link class="dropdown-item" to="/livres/ajout">Ajouter un livre</router-link></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><router-link class="dropdown-item" to="/livres/modifier">Modifier un livre</router-link></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><router-link class="dropdown-item" to="/livres/supprimer">Supprimer un livre</router-link></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Gestion des membres
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><router-link class="dropdown-item" to="/membres">Afficher listes membres</router-link></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><router-link class="dropdown-item" to="/membres/ajout">Ajouter un membre</router-link></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><router-link class="dropdown-item" to="/membres/modifier">Modifier un membre</router-link></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><router-link class="dropdown-item" to="/membres/supprimer">Supprimer un membre</router-link></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Gestion des prêts
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><router-link class="dropdown-item" to="/prets">Afficher liste des prêts</router-link></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><router-link class="dropdown-item" to="/prets/ajout">Ajouter un prêt</router-link></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><router-link class="dropdown-item" to="/prets/modifier">Modifier un prêt</router-link></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><router-link class="dropdown-item" to="/prets/supprimer">Supprimer un prêt</router-link></li>
+            </ul>
+          </li>
+        </ul>
   
           <form class="d-flex">
             <input
