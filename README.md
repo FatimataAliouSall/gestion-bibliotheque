@@ -22,6 +22,15 @@ Une application web de gestion de bibliothèque développée avec Vue.js 3 et la
    - Modifier les informations d'un prêt existant
    - Supprimer un prêt
 
+
+## Technologies utilisées
+
+- Vue.js 3 avec la Composition API et node js
+- Vue Router pour la navigation
+- Pinia pour la gestion d'état globale
+- Bootstrap pour le style de l'application
+
+
 ## Installation
 
 1. Clonez le dépôt Git :
