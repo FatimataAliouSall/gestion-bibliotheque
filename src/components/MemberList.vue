@@ -14,9 +14,11 @@
         <td>{{ member.email }}</td>
         <td>{{ member.phone }}</td>
         <td>
-          <button @click="$emit('edit-member', member)" class="btn btn-warning btn-sm">Modifier</button>
-          <button @click="$emit('remove-member', member)" class="btn btn-danger btn-sm">Supprimer</button>
-          <button @click="$emit('details-member', book)" class="btn btn-info btn-sm mx-1">Details</button>
+          <button @click="$emit('edit-member', member)" class="btn btn-warning btn-sm"><ion-icon
+            name="eyedrop"></ion-icon></button>
+          <button @click="$emit('remove-member', member)" class="btn btn-danger btn-sm"><ion-icon
+            name="trash"></ion-icon></button>
+          <button @click="$emit('details-member', book)" class="btn btn-info btn-sm mx-1"><ion-icon name="eye"></ion-icon></button>
         </td>
       </tr>
     </tbody>
