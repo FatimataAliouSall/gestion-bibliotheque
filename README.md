@@ -1,29 +1,110 @@
-# gestion-bibliotheque
+# Gestion de Bibliothèque
 
-This template should help get you started developing with Vue 3 in Vite.
+Une application web de gestion de bibliothèque développée avec Vue.js 3 et la Composition API qui permet de gérer les livres, membres et les prêts.
 
-## Recommended IDE Setup
+## Fonctionnalités
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+1. **Gestion des Livres**:
+   - Afficher la liste des livres
+   - Ajouter un nouveau livre
+   - Modifier les informations d'un livre existant
+   - Supprimer un livre
 
-## Customize configuration
+2. **Gestion des Membres**:
+   - Afficher la liste des membres
+   - Ajouter un nouveau membre
+   - Modifier les informations d'un membre existant
+   - Supprimer un membre
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+3. **Gestion des Prêts**:
+   - Afficher la liste des prêts
+   - Enregistrer un nouveau prêt
+   - Modifier les informations d'un prêt existant
+   - Supprimer un prêt
 
-## Project Setup
+## Technologies utilisées
 
-```sh
-npm install
+- Vue.js 3 avec la Composition API
+- Vue Router pour la navigation
+- Bootstrap pour le style de l'application
+
+## Installation
+
+1. Clonez le dépôt Git :
+
+   ```bash
+   git clone https://github.com/votre-compte/gestion-bibliotheque.git
+   ```
+
+
+2. Naviguez jusqu'au répertoire du projet :
+
+   ```bash
+   cd gestion-bibliotheque
+   ```
+
+3. Installez les dépendances :
+
+   ```bash
+   npm install
+   npm install vue-router@4
+   npm install bootstrap@5                 
+   ```
+4. Démarrez le serveur de développement :
+
+   ```bash
+   npm run serve
+   ```
+
+
+## Structure du projet
+
+Le projet est organisé de la manière suivante :
+
+```
+gestion-bibliotheque/
+├── src/
+│   ├── components/
+│   │   ├── BookForm.vue
+│   │   ├── BookList.vue
+│   │   ├── MemberForm.vue
+│   │   ├── MemberList.vue
+│   │   ├── LoanForm.vue
+│   │   └── LoanList.vue
+│   ├── views/
+│   │   ├── BooksView.vue
+│   │   ├── AddBookView.vue
+│   │   ├── EditBookView.vue
+│   │   ├── DeleteBookView.vue
+│   │   ├── MembersView.vue
+│   │   ├── AddMemberView.vue
+│   │   ├── EditMemberView.vue
+│   │   ├── DeleteMemberView.vue
+│   │   ├── LoansView.vue
+│   │   ├── AddLoanView.vue
+│   │   ├── EditLoanView.vue
+│   │   └── DeleteLoanView.vue
+│   ├── stores/
+│   │   ├── books.js
+│   │   ├── members.js
+│   │   └── loans.js
+│   ├── router/
+│   │   └── index.js
+│   ├── App.vue
+│   └── main.js
+├── public/
+└── package.json
 ```
 
-### Compile and Hot-Reload for Development
+- Le dossier `components` contient les composants réutilisables de l'application.
+- Le dossier `views` contient les vues principales de l'application, chacune correspondant à une fonctionnalité.
+- Le dossier `stores` contient les stores Pinia pour la gestion d'état globale.
+- Le fichier `router/index.js` définit la configuration du routeur Vue.
+- Le fichier `App.vue` est le composant racine de l'application.
+- Le fichier `main.js` est le point d'entrée de l'application.
 
-```sh
-npm run dev
-```
+## Contribution
 
-### Compile and Minify for Production
+Si vous souhaitez contribuer à ce projet, n'hésitez pas à ouvrir une issue ou à soumettre une pull request. Toutes les contributions sont les bienvenues !
 
-```sh
-npm run build
-```
+## Auteur
