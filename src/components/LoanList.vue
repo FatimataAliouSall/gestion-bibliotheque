@@ -16,9 +16,11 @@
         <td>{{ loan.loanDate }}</td>
         <td>{{ loan.returnDate }}</td>
         <td>
-          <button @click="$emit('edit-loan', loan)" class="btn btn-warning btn-sm">Modifier</button>
-          <button @click="$emit('remove-loan', loan)" class="btn btn-danger btn-sm">Supprimer</button>
-          <button @click="$emit('details-loan', loan)" class="btn btn-info btn-sm mx-1">Détails</button>
+          <button @click="$emit('edit-loan', loan)" class="btn btn-warning btn-sm"><ion-icon
+            name="eyedrop"></ion-icon></button>
+          <button @click="$emit('remove-loan', loan)" class="btn btn-danger btn-sm"><ion-icon
+            name="trash"></ion-icon></button>
+          <button @click="$emit('details-loan', loan)" class="btn btn-info btn-sm mx-1"><ion-icon name="eye"></ion-icon></button>
         </td>
       </tr>
     </tbody>
