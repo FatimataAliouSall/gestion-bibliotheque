@@ -91,11 +91,6 @@ gestion-bibliotheque/
 - Le fichier `App.vue` est le composant racine de l'application.
 - Le fichier `main.js` est le point d'entrée de l'application.
 
-## Contribution
-
-Si vous souhaitez contribuer à ce projet, n'hésitez pas à ouvrir une issue ou à soumettre une pull request. Toutes les contributions sont les bienvenues !
-
-
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
