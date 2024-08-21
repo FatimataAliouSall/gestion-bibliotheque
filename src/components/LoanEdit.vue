@@ -10,7 +10,6 @@
         <div class="mb-3">
           <input v-model="editedLoan.bookTitle" type="text" class="form-control" placeholder="Titre du livre" required />
         </div>
-
         <div class="mb-3">
           <input v-model="editedLoan.loanDate" type="date" class="form-control" placeholder="Date de prêt" required />
         </div>
