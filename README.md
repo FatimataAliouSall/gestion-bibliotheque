@@ -22,40 +22,34 @@ Une application web de gestion de bibliothèque développée avec Vue.js 3 et la
    - Modifier les informations d'un prêt existant
    - Supprimer un prêt
 
-## Technologies utilisées
-
-- Vue.js 3 avec la Composition API
-- Vue Router pour la navigation
-- Bootstrap pour le style de l'application
-
 ## Installation
 
 1. Clonez le dépôt Git :
 
    ```bash
-   git clone https://github.com/votre-compte/gestion-bibliotheque.git
+       git clone https://github.com/FatimataAliouSall/gestion-bibliotheque.git
    ```
-
 
 2. Naviguez jusqu'au répertoire du projet :
 
    ```bash
-   cd gestion-bibliotheque
+     cd gestion-bibliotheque
    ```
 
 3. Installez les dépendances :
 
    ```bash
-   npm install
-   npm install vue-router@4
-   npm install bootstrap@5                 
+    npm install
+    npm install vue-router@4
+    npm install bootstrap@5                 
    ```
 4. Démarrez le serveur de développement :
 
    ```bash
-   npm run serve
+     npm run serve
    ```
 
+5. Ouvrez votre navigateur et accédez à `http://localhost:5176/`.
 
 ## Structure du projet
 
@@ -67,23 +61,17 @@ gestion-bibliotheque/
 │   ├── components/
 │   │   ├── BookForm.vue
 │   │   ├── BookList.vue
+│   │   ├── BookEdit.vue
 │   │   ├── MemberForm.vue
+│   │   ├── MemberEdit.vue
 │   │   ├── MemberList.vue
 │   │   ├── LoanForm.vue
+│   │   ├── LoanEdit.vue
 │   │   └── LoanList.vue
 │   ├── views/
 │   │   ├── BooksView.vue
-│   │   ├── AddBookView.vue
-│   │   ├── EditBookView.vue
-│   │   ├── DeleteBookView.vue
 │   │   ├── MembersView.vue
-│   │   ├── AddMemberView.vue
-│   │   ├── EditMemberView.vue
-│   │   ├── DeleteMemberView.vue
-│   │   ├── LoansView.vue
-│   │   ├── AddLoanView.vue
-│   │   ├── EditLoanView.vue
-│   │   └── DeleteLoanView.vue
+│   │   ├── LoanView.vue
 │   ├── stores/
 │   │   ├── books.js
 │   │   ├── members.js
@@ -107,4 +95,13 @@ gestion-bibliotheque/
 
 Si vous souhaitez contribuer à ce projet, n'hésitez pas à ouvrir une issue ou à soumettre une pull request. Toutes les contributions sont les bienvenues !
 
-## Auteur
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## Author
+
+[FatimataAliouSall](https://github.com/FatimataAliouSall/gestion-bibliotheque.git)
+
+

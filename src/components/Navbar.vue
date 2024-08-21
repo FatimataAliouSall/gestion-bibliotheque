@@ -104,15 +104,19 @@ export default {
 
 <style scoped>
 .custom-nav .nav-item {
-  margin-right: 20px;
+  margin-right: 50px;
 }
 
 .navbar {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 .nav-item {
   margin-right: 20px;
+}
+
+.navbar-brand{
+  margin-right:60px;
 }
 </style>
