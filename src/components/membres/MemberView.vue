@@ -1,0 +1,48 @@
+<template>
+  <div>
+    <h1 class="text-center border-bottom mb-2">Gestion des membres:</h1>
+    <MemberAdd class="border-bottom pb-4" @on-add="add" ref="formComponent" />
+    <MemberList :membres="membres" class="mt-4" @on-remove="remove" @on-edit="edit" />
+    <MemberEdit :membre="selectedMembre" @on-update="update" @on-cancel="cancel" />
+  </div>
+</template>
+
+<script setup>
+import { ref } from 'vue';
+import MemberAdd from './MemberAdd.vue';
+import MemberList from './MemberList.vue';
+import MemberEdit from './MemberEdit.vue';
+
+const membres = ref([
+  { prenom: 'Mohamed', nom: 'Dia', dateInscription: '2022-01-01', telephone: '4812120' },
+  { prenom: 'Joe', nom: 'Fall', dateInscription: '2024-05-05', telephone: '37381910' },
+]);
+
+const formComponent = ref();
+const selectedMembre = ref(null);
+
+const add = (prenom, nom, dateInscription, telephone) => {
+  membres.value.push({ prenom, nom, dateInscription, telephone });
+  console.log("Membre ajouté");
+};
+
+const remove = (index) => {
+  membres.value.splice(index, 1);
+};
+
+const edit = (index) => {
+  selectedMembre.value = membres.value[index];
+};
+
+const update = (updatedMembre) => {
+  const index = membres.value.findIndex(m => m.telephone === selectedMembre.value.telephone);
+  if (index !== -1) {
+    membres.value[index] = updatedMembre;
+  }
+  cancel();
+};
+
+const cancel = () => {
+  selectedMembre.value = null;
+};
+</script>

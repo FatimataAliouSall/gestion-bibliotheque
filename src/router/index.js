@@ -1,34 +1,18 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import BooksView from '../views/BooksView.vue';
-import MembersView from '../views/MembersView.vue';
-import LoanView from '@/views/LoanView.vue';
-import LoanForm from '@/components/LoanForm.vue'; 
-import LoanEdit from '../components/LoanEdit.vue';
+import Pret from '../components/prets/Pret.vue';
+import BookView from '../components/livres/BookView.vue';
+import MemberView from '../components/membres/MemberView.vue';
 
 const routes = [
-  { path: '/', redirect: '/livres' },
-  { path: '/livres', component: BooksView },
-  { path: '/membres', component: MembersView },
-  {
-    path: '/prets',
-    name: 'Prets',
-    component: LoanView
-  },
-  {
-    path: '/prets/ajout',
-    name: 'AddLoan',
-    component: LoanForm,
-  },
-  {
-    path: '/prets/modifier',
-    name: 'LoanEdit',
-    component: LoanEdit,
-  },
+  { path: '/', component: MemberView },
+  { path: '/prets', component: Pret },
+  { path: '/livre', component: BookView},
+  { path: '/membres', component: MemberView },
 ];
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
 });
 
 export default router;

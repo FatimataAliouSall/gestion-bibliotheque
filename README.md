@@ -60,38 +60,6 @@ Une application web de gestion de bibliothèque développée avec Vue.js 3 et la
 
 5. Ouvrez votre navigateur et accédez à `http://localhost:5176/`.
 
-## Structure du projet
-
-Le projet est organisé de la manière suivante :
-
-```
-gestion-bibliotheque/
-├── src/
-│   ├── components/
-│   │   ├── BookForm.vue
-│   │   ├── BookList.vue
-│   │   ├── BookEdit.vue
-│   │   ├── MemberForm.vue
-│   │   ├── MemberEdit.vue
-│   │   ├── MemberList.vue
-│   │   ├── LoanForm.vue
-│   │   ├── LoanEdit.vue
-│   │   └── LoanList.vue
-│   ├── views/
-│   │   ├── BooksView.vue
-│   │   ├── MembersView.vue
-│   │   ├── LoanView.vue
-│   ├── stores/
-│   │   ├── books.js
-│   │   ├── members.js
-│   │   └── loans.js
-│   ├── router/
-│   │   └── index.js
-│   ├── App.vue
-│   └── main.js
-├── public/
-└── package.json
-```
 
 - Le dossier `components` contient les composants réutilisables de l'application.
 - Le dossier `views` contient les vues principales de l'application, chacune correspondant à une fonctionnalité.
