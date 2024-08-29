@@ -80,7 +80,21 @@
                 <li><router-link class="dropdown-item" to="/prets/supprimer">Supprimer un prêt</router-link></li>
               </ul>
             </li>
+            
+            <li class="nav-item" v-if="!user">
+            <router-link class="nav-link" to="/signin">Connexion</router-link>
+          </li>
+          <li class="nav-item" v-if="!user">
+            <router-link class="nav-link" to="/signup">Inscription</router-link>
+          </li>
+          <li class="nav-item" v-if="user">
+            <a class="nav-link" href="#" @click.prevent="handleSignOut">Déconnexion</a>
+          </li>
+
           </ul>
+  
+         
+     
   
           
         </div>
