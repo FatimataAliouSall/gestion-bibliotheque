@@ -1,43 +1,67 @@
+<!-- src/components/auth/SignUp.vue -->
 <template>
-    <div class="container mt-5">
-      <h2>Inscription</h2>
-      <form @submit.prevent="handleSignUp">
-        <div class="mb-3">
-          <label for="name" class="form-label">Nom</label>
-          <input type="text" class="form-control" id="name" placeholder="Enter your name" v-model="name" required>
-        </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control" id="email" placeholder="Enter your email" v-model="email" required>
-        </div>
-        <div class="mb-3">
-          <label for="password" class="form-label">Mot de passe</label>
-          <input type="password" class="form-control" id="password" placeholder="Enter your password" v-model="password" required>
-        </div>
-        <button type="submit" class="btn btn-primary">S'inscrire</button>
-      </form>
-    </div>
-  </template>
-  
-  <script setup>
-  import { ref } from 'vue';
-  import { useRouter } from 'vue-router';
+  <div class="signup-container">
+    <h1>Inscription</h1>
+    <form @submit.prevent="handleSignUp">
+      <div class="form-group">
+        <label for="name">Nom</label>
+        <input type="text" id="name" v-model="name" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" v-model="email" required />
+      </div>
+      <div class="form-group">
+        <label for="password">Mot de passe</label>
+        <input type="password" id="password" v-model="password" required />
+      </div>
+      <button type="submit" class="btn btn-primary">S'inscrire</button>
+    </form>
+  </div>
+</template>
 
-  
-  const name = ref('');
-  const email = ref('');
-  const password = ref('');
-  const router = useRouter();
+<script setup>
+import { ref } from 'vue';
 
-  
-  const handleSignUp = async () => {
-    try {
-      await signUp(name.value, email.value, password.value);
-      router.push('/');
-    } catch (error) {
-      console.error('Erreur d\'inscription:', error);
-      
-    }
-  };
-  </script>
-  
+const name = ref('');
+const email = ref('');
+const password = ref('');
+
+function handleSignUp() {
+  console.log('Nom:', name.value);
+  console.log('Email:', email.value);
+  console.log('Mot de passe:', password.value);
+}
+</script>
+
+<style scoped>
+.signup-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+}
+</style>

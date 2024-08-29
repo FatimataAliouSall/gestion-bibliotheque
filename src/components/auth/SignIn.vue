@@ -17,21 +17,17 @@
 
 <script setup>
 import { ref } from 'vue';
-import { useRouter } from 'vue-router';
-
+import { useAuthStore } from '../stores/auth';
 
 const email = ref('');
 const password = ref('');
-const router = useRouter();
-
+const authStore = useAuthStore();
 
 const handleSignIn = async () => {
   try {
-    await signIn(email.value, password.value);
-    router.push('/');
+    await authStore.signIn(email.value, password.value);
   } catch (error) {
     console.error('Erreur de connexion:', error);
-    
   }
 };
 </script>
