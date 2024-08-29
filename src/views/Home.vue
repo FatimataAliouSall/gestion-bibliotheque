@@ -1,9 +1,16 @@
+
 <template>
-    <div class="container mt-5">
-      <h1>Bienvenue dans le système de gestion de la bibliothèque</h1>
-    </div>
-  </template>  
-  <script>
-  
-  </script>
-  
+  <div class="home-container">
+    <h1>Bienvenue à la Gestion de Bibliothèque</h1>
+  </div>
+</template>
+
+<script setup>
+</script>
+
+<style scoped>
+.home-container {
+  padding: 50px;
+  text-align: center;
+}
+</style>

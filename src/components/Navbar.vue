@@ -12,7 +12,7 @@
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
-        </button>
+      </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 custom-nav">
             <li class="nav-item">
@@ -80,6 +80,17 @@
                 <li><router-link class="dropdown-item" to="/prets/supprimer">Supprimer un prêt</router-link></li>
               </ul>
             </li>
+            
+            <li class="nav-item" v-if="!user">
+            <router-link class="nav-link" to="/signin">Connexion</router-link>
+          </li>
+          <li class="nav-item" v-if="!user">
+            <router-link class="nav-link" to="/signup">Inscription</router-link>
+          </li>
+          <li class="nav-item" v-if="user">
+            <a class="nav-link" href="#" @click.prevent="handleSignOut">Déconnexion</a>
+          </li>
+
           </ul>
   
           
